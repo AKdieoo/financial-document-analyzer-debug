@@ -64,6 +64,26 @@ Execution is strictly sequential using `Process.sequential`, with explicit task 
 
 ---
 
+---
+
+## Project Structure
+
+financial-document-analyzer-debug/
+│
+├── main.py
+├── agents.py
+├── task.py
+├── tools.py
+├── database.py
+├── requirements.txt
+│
+├── data/
+│   └── TSLA-Q2-2025-Update.pdf
+│
+└── README.md
+
+---
+
 ## Deterministic Bugs Identified & Fixed
 
 ### 1. Missing Document Text Injection
@@ -303,6 +323,23 @@ http://127.0.0.1:8000/docs
 ```
 
 ---
+---
+
+## Sample Financial Document Included
+
+For demonstration and testing purposes, this repository includes a sample financial earnings document:
+
+- `data/TSLA-Q2-2025-Update.pdf`
+
+This PDF was used to validate:
+
+- PDF ingestion and text extraction
+- Multi-agent financial analysis flow
+- Risk assessment reasoning
+- Final BUY / HOLD / SELL recommendation logic
+
+You may replace this file with any other financial report PDF and analyze it using the `/analyze` endpoint.
+
 
 ## Repository Hygiene
 
@@ -311,7 +348,6 @@ To maintain a clean and production-ready repository, the following files and dir
 * `venv/`
 * `__pycache__/`
 * `analysis.db`
-* `data/`
 * `.env`
 * `*.pyc`
 
